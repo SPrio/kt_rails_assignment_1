@@ -1,4 +1,5 @@
 require 'csv'
+require 'prawn'
 
 require_relative 'boot'
 

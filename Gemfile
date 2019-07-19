@@ -64,3 +64,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "prawn", "~> 2.2.2"
 
 gem "figaro"
+
+gem "paperclip", "~> 6.0.0"

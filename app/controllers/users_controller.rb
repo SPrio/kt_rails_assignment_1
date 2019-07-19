@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def index
-    @users = User.all
+    @users = User.order(:name).all.limit 50
 
     respond_to do |format|
       format.html
@@ -9,5 +9,10 @@ class UsersController < ApplicationController
       format.pdf { send_data @users.to_pdf }
     end
   end
-  
+  def send_mail
+    @students = Student.all
+    @receiver= {:email => "mahantasupriyo@gmail.com"}
+    UserMailer.sample_email(@receiver, @students).deliver
+    redirect_to users_index_path
+  end
 end

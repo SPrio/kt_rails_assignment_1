@@ -1,2 +1,3 @@
 <%= button_to "Export CSV", users_index_path(format: :csv) , :method => :get%>
 <%= button_to "Export PDF", users_index_path(format: :pdf) , :method => :get%>
+<%= button_to "Send mail", users_send_mail_path , :method => :get%>

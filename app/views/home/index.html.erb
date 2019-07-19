@@ -1,3 +1,6 @@
 <h1>You are now in index action of Home Controller</h1>
 <p>Find me in app/views/home/index.html.erb</p>
+<%= button_to "Export CSV", home_index_path(format: :csv) , :method => :get%>
+<%= button_to "Export PDF", home_index_path(format: :pdf) , :method => :get%>
+<%= button_to "Send mail", home_send_mail_path , :method => :get%>
 
